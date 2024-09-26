@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Directory Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .form-container {
+            background-color: #f0f8ff;
+            padding: 20px;
+
+            border-radius: 8px;
+        }
+        input, select {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .employee-list, .employee-details {
+            margin-top: 30px;
+        }
+        .employee-list ol {
+            list-style-type: none;
+            padding: 0;
+        }
+        .employee-list li a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .employee-list li a:hover {
+            text-decoration: underline;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #007bff;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        .profile-pic {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        
+        .map-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Company Directory Portal</h1>
+        <div class="form-container">
+            <h2>Employee Registration Form</h2>
+            <form>
+                <label for="fullName">Full Name:</label><br>
+                <input type="text" id="fullName" name="fullName" required><br>
+                
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                
+                <label for="department">Department:</label><br>
+                <select id="department" name="department">
+                    <option value="IT">IT</option>
+                    <option value="HR">HR</option>
+                </select><br>
+                
+                <label for="employeeId">Employee ID:</label><br>
+                <input type="text" id="employeeId" name="employeeId" required><br>
+                
+                <label for="profilePicture">Profile Picture URL:</label><br>
+                <input type="url" id="profilePicture" name="profilePicture"><br>
+                
+                <button type="submit">Register Employee</button>
+            </form>
+        </div>
+
+        
+        <div class="employee-list">
+            <h2>Employee List</h2>
+            <ol>
+                <li>1. <a href="mailto:john@example.com">John Doe - john@example.com</a></li>
+                <hr>
+                <li>2. <a href="mailto:jane@example.com">Jane Smith - jane@example.com</a></li>
+                <hr>
+            </ol>
+        </div>
+
+        
+        <div class="employee-details">
+            <h2>Employee Details</h2>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Employee ID</th>
+                    <th>Department</th>
+                    <th>Profile Picture</th>
+                </tr>
+                <tr>
+                    <td>John Doe</td>
+                    <td>12345</td>
+                    <td>IT</td>
+                    <td><img class="profile-pic" src="https://via.placeholder.com/50" alt="Profile Picture"></td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>67890</td>
+                    <td>HR</td>
+                    <td><img class="profile-pic" src="https://via.placeholder.com/50" alt="Profile Picture"></td>
+                </tr>
+            </table>
+        </div>
+
+        
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d367.26607652443727!2d78.38971596211196!3d17.498030204824097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91f3fdf6bde9%3A0x752db86a6ab3be2a!2sInnomatics%20Research%20Labs!5e1!3m2!1sen!2sin!4v1727238708760!5m2!1sen!2sin" 
+                allowfullscreen="" 
+                loading="lazy"></iframe>
+        </div>
+
+    </div>
+
+</body>
+</html>
