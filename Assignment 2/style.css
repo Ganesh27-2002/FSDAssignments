@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: grid;
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+    gap: 10px;
+    /* order: 2px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; */
+    padding: 20px;
+    
+  }
+  
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    height: 150px;
+    text-align: center;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  }
+  
+  /* Mobile layout */
+  @media (max-width: 600px) {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+    .header {
+      background-color: lightblue;
+    }
+    .content {
+      background-color: lightgray;
+    }
+    .signup {
+      background-color: lightgreen;
+    }
+    .feature:nth-child(4) {
+      background-color: lightcoral;
+    }
+    .feature:nth-child(5) {
+      background-color: lightgoldenrodyellow;
+    }
+    .feature:nth-child(6) {
+      background-color: lightpink;
+    }
+    .feature:nth-child(7) {
+      background-color: lightcyan;
+    }
+  }
+  
+  /* Tablet layout */
+  @media (min-width: 601px) and (max-width: 992px) {
+    .container {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto;
+    }
+    .header {
+      grid-column: 1 / -1;
+      background-color: lightblue;
+    }
+    .content {
+      grid-column: 1 / -1;
+      background-color: lightgray;
+    }
+    .signup {
+      background-color: lightgreen;
+      grid-column: 1 / -1;
+    }
+    .feature:nth-child(4) {
+      grid-column: 1;
+      background-color: lightcoral;
+    }
+    .feature:nth-child(5) {
+      grid-column: 2;
+      background-color: lightgoldenrodyellow;
+    }
+    .feature:nth-child(6) {
+      grid-column: 1;
+      background-color: lightpink;
+    }
+    .feature:nth-child(7) {
+      grid-column: 2;
+      background-color: lightcyan;
+    }
+  }
+  
+  /* Desktop layout */
+  @media (min-width: 993px) {
+    .container {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto auto;
+    }
+    .header {
+      grid-column: 1 / -1;
+      background-color: lightblue;
+    }
+    .content {
+      grid-column: 1 / -1;
+      background-color: lightgray;
+    }
+    .signup {
+      grid-column: 1 / -1;
+      background-color: lightgreen;
+    }
+    .feature:nth-child(4) {
+      grid-column: 1;
+      background-color: lightcoral;
+    }
+    .feature:nth-child(5) {
+      grid-column: 2;
+      background-color: lightgoldenrodyellow;
+    }
+    .feature:nth-child(6) {
+      grid-column: 3;
+      background-color: lightpink;
+    }
+    .feature:nth-child(7) {
+        grid-column: 1 / -1;
+        background-color: lightcyan;
+      }
+  }
+  
