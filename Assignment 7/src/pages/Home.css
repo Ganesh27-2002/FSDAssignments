@@ -1,0 +1,13 @@
+a:hover {
+    color: #0d6efd;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0044cc;
+  }
+  
+  .btn-outline-success:hover {
+    background-color: #28a745;
+    color: white;
+  }
+  
